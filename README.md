@@ -3,7 +3,7 @@ Quick and dirty Tableau JS API extension
 
 Usage:
 
-Include the js file AFTER the tableau.x.x.x.js
+Include the js script AFTER the tableau.x.x.x.js
 
 ```html
     <script type="text/javascript" src=".../javascripts/api/tableau-2.5.1.js"></script>
