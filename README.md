@@ -1,6 +1,8 @@
 # extendJSAPI
 Quick and dirty Tableau JS API extension
 
+WIP, the patching method is still very dirty...
+
 Usage:
 
 Download and host the embedrocks.js script
