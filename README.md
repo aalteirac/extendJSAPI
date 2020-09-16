@@ -10,6 +10,7 @@ Include the js file AFTER the tableau.x.x.x.js
 	<script type="text/javascript" src=".../javascripts/api/embedrocks.js"></script>
 ```
 
+
 Now you have a new method on viz for opening the native "Custom Views" popup:
 
 viz.showCustomViewsDialog()
