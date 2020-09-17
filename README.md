@@ -1,13 +1,13 @@
 # extendJSAPI
-Quick and dirty Tableau JS API extension
-
-WIP, the patching method is still very dirty...
+Quick Tableau JS API extension
 
 Usage:
 
 Download and host the embedrocks.js script
 
 Include the js script AFTER the tableau.x.x.x.js
+
+WARNING: Only works with UNMINIFIED version of tableau.js
 
 ```html
     <script type="text/javascript" src=".../javascripts/api/tableau-2.5.1.js"></script>
