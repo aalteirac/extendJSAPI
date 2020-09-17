@@ -1,5 +1,5 @@
 if(tableau)
-Array.prototype.push=(function(){
+    Array.prototype.push=(function(){
 		var original = Array.prototype.push;
 		return function() {
 			if(arguments[0] && arguments[0]._impl && arguments[0]._impl.$viz){
