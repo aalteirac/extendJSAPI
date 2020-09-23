@@ -17,6 +17,9 @@ WARNING: Only works with UNMINIFIED version of tableau.js
 
 Now you have methods on viz for opening the native 
 
+"Alert" popup:
+viz.showDataAlertDialog()
+
 "Subscription" popup:
 viz.showSubscriptionDialog()
 
