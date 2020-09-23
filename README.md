@@ -15,8 +15,12 @@ WARNING: Only works with UNMINIFIED version of tableau.js
 ```
 
 
-Now you have a new method on viz for opening the native "Custom Views" popup:
+Now you have methods on viz for opening the native 
 
+"Subscription" popup:
+viz.showSubscriptionDialog()
+
+"Custom Views" popup:
 viz.showCustomViewsDialog()
 
 ![ScreenShot](https://raw.githubusercontent.com/aalteirac/extendJSAPI/master/pic.png)
