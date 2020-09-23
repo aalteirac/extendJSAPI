@@ -20,6 +20,16 @@ if(tableau)
 								}
 								this._impl.$messagingOptions.sendCommand(Object).call(this._impl.$messagingOptions, null, returnHandler);
 							}
+							v.showSubscriptionDialog= function Viz$ShowSubscriptionDialog() {
+								var returnHandler={
+									$commandName:"api.ShowSubscribeDialog",
+									$errorCallback:  function(a,b){},
+									$successCallBack: function(a){},
+									$successCallbackTiming:1,
+									get_commandName:function(){return this.$commandName}
+								}
+								this._impl.$messagingOptions.sendCommand(Object).call(this._impl.$messagingOptions, null, returnHandler);
+							}
 							v.patched=true;
 						}
 					})
