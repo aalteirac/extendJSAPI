@@ -7,7 +7,10 @@ Download and host the embedrocks.js script
 
 Include the js script AFTER the tableau.x.x.x.js
 
-WARNING: Only works with following tableau.js unminified versions : 2.6.0, 2.5.0, 2.4.0, 2.3.0, 2.2.2, 2.2.1
+
+WARNING: Works with all UNMINIFIED tableau.js version, but only works with following tableau.js MINIFIED: 
+
+2.6.0, 2.5.0, 2.4.0, 2.3.0, 2.2.2, 2.2.1
 
 If others are needed contact me :-)
 
