@@ -15,7 +15,7 @@
 //Here $1s is the $viz for 2.5.0
 //Here $1t is the $viz for 2.6.0
 
-var damndetect={
+var damndetect={ 
 	"6":{detectViz:"$1t",detectMsg:"$1n"},
 	"5":{detectViz:"$1s",detectMsg:"$1m"},
 	"4":{detectViz:"$1r",detectMsg:"$1l"},
