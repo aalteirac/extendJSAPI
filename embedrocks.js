@@ -15,24 +15,33 @@
 //Here $1s is the $viz for 2.5.0
 //Here $1t is the $viz for 2.6.0
 
-var damndetect={6:{detectViz:"$1t",detectMsg:"$1n"},
-	5:{detectViz:"$1s",detectMsg:"$1m"},
-	4:{detectViz:"$1r",detectMsg:"$1l"},
-	3:{detectViz:"$1p",detectMsg:"$1j"},
-	2:{detectViz:"$1p",detectMsg:"$1j"}
+var damndetect={
+	"6":{detectViz:"$1t",detectMsg:"$1n"},
+	"5":{detectViz:"$1s",detectMsg:"$1m"},
+	"4":{detectViz:"$1r",detectMsg:"$1l"},
+	"3":{detectViz:"$1p",detectMsg:"$1j"},
+	"2":{detectViz:"$1p",detectMsg:"$1j"},
+	"0":{detectViz:"$viz",detectMsg:"$messagingOptions"},
 }
 if(tableau){
-	var vstableau=tableau.Version.getCurrent().$2
-	var detectViz=damndetect[vstableau].detectViz;
-	var detectMsg=damndetect[vstableau].detectMsg;
+	var vstableau,detectViz,detectMsg;
+	if(tableau.Version.getCurrent().$major){
+		console.log(`Uncompressed Version ${tableau.Version.getCurrent().toString().split("-")[0]} Detected!!`);
+		detectViz=damndetect["0"].detectViz;
+		detectMsg=damndetect["0"].detectMsg;
+	}
+	else{
+		console.log(`Minified Version ${tableau.Version.getCurrent().toString().split("-")[0]} Detected!!`);
+		vstableau=tableau.Version.getCurrent().$2
+		detectViz=damndetect[vstableau].detectViz;
+		detectMsg=damndetect[vstableau].detectMsg;
+	}
+
+	
 	Array.prototype.push=(function(){
 		var original = Array.prototype.push;
 		return function() {
-			if(arguments[0] && arguments[0]._impl && (arguments[0]._impl[detectViz] || arguments[0]._impl.$viz)){
-				if(arguments[0]._impl.$viz)
-					console.log(`Uncompressed Version ${vstableau} Detected!!`)
-				else 
-					console.log(`Minified Version ${vstableau} Detected!!`)	
+			if(arguments[0] && arguments[0]._impl && arguments[0]._impl[detectViz]){
 				console.log("Viz array ready for patch, restoring original Array prototype...");
 				Array.prototype.push=original;
 				this.push = function (){
@@ -69,9 +78,6 @@ if(tableau){
 			$successCallbackTiming:1,
 			get_commandName:function(){return this.$commandName}
 		}
-		if(_this._impl.$viz)
-			_this._impl.$messagingOptions.sendCommand(Object).call(_this._impl.$messagingOptions, null, returnHandler);
-		else
-			_this._impl[detectMsg].sendCommand(Object).call(_this._impl[detectMsg], null, returnHandler);
+		_this._impl[detectMsg].sendCommand(Object).call(_this._impl[detectMsg], null, returnHandler);
 	}
 }
