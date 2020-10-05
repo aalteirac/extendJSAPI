@@ -1,6 +1,9 @@
 # extendJSAPI
 Quick Tableau JS API extension
 
+# DISCLAIMER: THIS IS NOT SUPPORTED BY TABLEAU SOFTWARE AND DELIVERED AS IS WITHOUT WARRANTY
+# USE AT YOUR OWN RISK
+
 Usage:
 
 Download and host the embedrocks.js script
