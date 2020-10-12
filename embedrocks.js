@@ -36,8 +36,6 @@ if(tableau){
 		detectViz=damndetect[vstableau].detectViz;
 		detectMsg=damndetect[vstableau].detectMsg;
 	}
-
-	
 	Array.prototype.push=(function(){
 		var original = Array.prototype.push;
 		return function() {
