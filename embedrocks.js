@@ -4,7 +4,7 @@
 //Here $1j is the $messagingOptions for 2.3.0, 2.2.2, 2.2.1
 //Here $1l is the $messagingOptions for 2.4.0
 //Here $1m is the $messagingOptions for 2.5.0
-//Here $1n is the $messagingOptions for 2.6.0
+//Here $1n is the $messagingOptions for 2.7.0, 2.6.0
 
 //Se also need to get name of var "$viz"
 //Search for global.tab.VizImpl=ss.mkType(a,'tab.VizImpl'  ... the 2nd var nullified is the right one
@@ -13,9 +13,10 @@
 //Here $1p is the $viz for 2.3.0, 2.2.2, 2.2.1
 //Here $1r is the $viz for 2.4.0
 //Here $1s is the $viz for 2.5.0
-//Here $1t is the $viz for 2.6.0
+//Here $1t is the $viz for 2.7.0, 2.6.0
 
 var damndetect={ 
+	"7":{detectViz:"$1t",detectMsg:"$1n"},
 	"6":{detectViz:"$1t",detectMsg:"$1n"},
 	"5":{detectViz:"$1s",detectMsg:"$1m"},
 	"4":{detectViz:"$1r",detectMsg:"$1l"},
